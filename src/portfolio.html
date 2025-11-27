@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - JRC DIGIT</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">JRC <span>DIGIT</span></a>
+      <nav class="nav-menu">
+        <a href="index.html">ACCUEIL</a>
+        <a href="about.html">A PROPOS</a>
+        <a href="services.html">SERVICES</a>
+        <a href="portfolio.html" class="active">PORTFOLIO</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>NOTRE PORTFOLIO</h1>
+      <p>Decouvrez nos realisations et laissez-vous inspirer</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">TOUS</button>
+        <button class="filter-btn" data-filter="web">SITES WEB</button>
+        <button class="filter-btn" data-filter="flyers">FLYERS</button>
+        <button class="filter-btn" data-filter="music">CHANSONS</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item fade-in" data-category="web">
+          <div style="background: #1a1a1a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-store' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>BOUTIQUE EN LIGNE</h4>
+            <span>E-COMMERCE</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="flyers">
+          <div style="background: #2a2a2a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-calendar-event' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>AFFICHE CONCERT</h4>
+            <span>EVENEMENT</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="music">
+          <div style="background: #3a3a3a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-radio' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>JINGLE RADIO</h4>
+            <span>PUBLICITE</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="web">
+          <div style="background: #4a4a4a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-restaurant' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>SITE RESTAURANT</h4>
+            <span>SITE VITRINE</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="flyers">
+          <div style="background: #5a5a5a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-party' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>FLYER SOIREE</h4>
+            <span>EVENEMENT</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="music">
+          <div style="background: #6a6a6a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-heart' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>CHANSON MARIAGE</h4>
+            <span>PERSONNALISE</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="web">
+          <div style="background: #7a7a7a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-briefcase' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>SITE CORPORATE</h4>
+            <span>ENTREPRISE</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="flyers">
+          <div style="background: #8a8a8a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-discount' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>FLYER PROMO</h4>
+            <span>MARKETING</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="music">
+          <div style="background: #9a9a9a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class='bx bx-building-house' style="font-size: 4rem; color: white;"></i>
+          </div>
+          <div class="portfolio-overlay">
+            <h4>MUSIQUE D'AMBIANCE</h4>
+            <span>ENTREPRISE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-preview">
+    <div class="container">
+      <h2 class="section-title">VOTRE PROJET ICI ?</h2>
+      <p>Rejoignez nos clients satisfaits et laissez-nous creer quelque chose d'exceptionnel pour vous.</p>
+      <a href="contact.html" class="btn">DEMARRER UN PROJET</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>JRC DIGIT</h4>
+          <p>Votre partenaire digital pour tous vos projets web, graphiques et musicaux.</p>
+          <div class="social-links">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>LIENS RAPIDES</h4>
+          <a href="index.html">Accueil</a>
+          <a href="about.html">A Propos</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>CONTACT</h4>
+          <p><i class='bx bx-envelope'></i> contact@jrcdigit.com</p>
+          <p><i class='bx bx-phone'></i> +33 1 23 45 67 89</p>
+          <p><i class='bx bx-map'></i> Paris, France</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 JRC DIGIT. Tous droits reserves.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

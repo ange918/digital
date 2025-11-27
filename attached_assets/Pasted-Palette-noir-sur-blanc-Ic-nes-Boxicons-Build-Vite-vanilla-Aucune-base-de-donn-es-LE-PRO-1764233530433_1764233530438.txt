@@ -1,0 +1,193 @@
+Palette : noir sur blanc
+Icônes : Boxicons
+Build : Vite (vanilla)
+Aucune base de données.
+
+🧾 LE PROMPT À COLLER DIRECTEMENT :
+
+« Génère-moi un projet Vite (template vanilla) pour un site web professionnel appelé JRC DIGIT, une agence digitale.
+Le site doit être entièrement construit en HTML, CSS et JavaScript, dans le dossier /src.
+La palette doit être noir sur blanc (#000 et #fff).
+Les titres doivent être en majuscule.
+L’ensemble du code doit être clean, responsive, bien organisé et facile à modifier.
+Utilise uniquement des fichiers statiques (pas de backend).
+Utilise Boxicons.
+
+🗂️ STRUCTURE DU PROJET VITE
+
+Utilise un template Vite vanilla :
+
+npm create vite@latest jrc-digit --template vanilla
+
+
+Dans /src, tu dois créer :
+
+✔ /src/index.html — ACCUEIL
+
+Contenu obligatoire :
+
+HEADER global (logo + menu)
+
+SECTION HERO
+
+SECTION À-PROPOS (résumé)
+
+SECTION SERVICES (résumé des 3 services)
+
+SECTION PORTFOLIO (3 projets en aperçus)
+
+SECTION CONTACT (résumé)
+
+FOOTER global
+
+✔ /src/about.html — À PROPOS
+
+Hero
+
+Histoire de JRC DIGIT
+
+Vision
+
+Valeurs
+
+Photo de l’équipe
+
+✔ /src/services.html — PAGE SERVICES
+
+3 cartes de services :
+
+Création de sites web
+
+Affiches & flyers
+
+Chansons personnalisées
+Chaque carte → bouton "voir le service"
+Amène vers une page individuelle.
+
+✔ Pages individuelles pour chaque service :
+
+/src/service-web.html
+
+/src/service-flyers.html
+
+/src/service-chanson.html
+
+Chaque page doit contenir :
+
+• HÉRO
+
+Titre du service
+Image large en haut
+
+• DESCRIPTION
+
+Texte clair et professionnel
+
+• EXPERT
+
+Carte contenant :
+
+Photo de l’expert
+
+Nom complet
+
+Icônes Facebook / Instagram / site personnel
+
+• BANDE ROULANTE DES OUTILS (obligatoire)
+
+Une marquee CSS/JS horizontale avec les outils :
+
+HTML / CSS / JS
+
+Figma
+
+Canva / Photoshop / Illustrator
+
+FL Studio / Logic Pro (pour la musique)
+
+• BOUTON "Commander maintenant"
+
+Renvoie vers la page contact.
+
+✔ /src/portfolio.html — PORTFOLIO
+
+Grid de projets
+
+Filtre (Tous – Sites web – Flyers – Chansons)
+
+Effets hover
+
+Popup ou page détaillée possible
+
+✔ /src/contact.html — CONTACT
+
+Formulaire (Nom, email, sujet, message)
+
+Coordonnées de l’agence
+
+Icônes réseaux
+
+Google Maps (intégration iframe)
+
+✔ LES FICHIERS COMMUNS
+
+Dans /src/assets :
+
+/src/assets/css/style.css
+
+Styles globaux
+
+Palettes noir/blanc
+
+Header sticky
+
+Footer
+
+Animations légères (fade, slide)
+
+Bande roulante outils
+
+/src/assets/js/main.js
+
+Menu mobile
+
+Animation
+
+Gestion du scroll
+
+Script de la bande roulante
+
+/src/assets/img/
+
+Dossier images.
+
+✔ CONTRAINTES
+
+Vite doit compiler et servir le site correctement
+
+Pas de React, pas de Tailwind, pas de backend
+
+Code lisible, simple, professionnel
+
+Structure des fichiers respectée
+
+Tous les titres en MAJUSCULES
+
+Design inspiré des sites modernes agency/portfolio
+
+✔ LIVRABLE ATTENDU
+
+Le générateur doit produire :
+
+Toute l’arborescence complète Vite
+
+Chaque page HTML
+
+Le CSS
+
+Le JS
+
+Les scripts pour lancer :
+
+npm install
+npm run dev

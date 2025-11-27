@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - JRC DIGIT</title>
+  <meta name="description" content="Contactez JRC DIGIT pour discuter de votre projet digital.">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -28,27 +29,63 @@
 
   <section class="page-hero">
     <div class="container">
-      <h1>CONTACTEZ-NOUS</h1>
-      <p>Parlons de votre projet et donnons vie a vos idees</p>
+      <h1 class="glow-title">CONTACTEZ-NOUS</h1>
+      <p>Parlons de votre projet et donnons vie à vos idées</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="contact-section">
-        <div class="contact-form fade-in">
-          <h3 style="margin-bottom: 30px;">ENVOYEZ-NOUS UN MESSAGE</h3>
-          <form>
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <input type="text" name="subject" placeholder="Sujet">
-            <textarea name="message" placeholder="Votre message" required></textarea>
-            <button type="submit" class="btn">ENVOYER LE MESSAGE</button>
+        <div class="glass-card fade-in">
+          <h3 style="margin-bottom: 30px; color: var(--neon-blue);">ENVOYEZ-NOUS UN MESSAGE</h3>
+          <form class="contact-form" data-form-type="contact" action="/php/save_order.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="service" value="contact">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <input type="text" name="nom" placeholder="Votre nom *" required>
+              <input type="email" name="email" placeholder="Votre email *" required>
+            </div>
+            
+            <input type="tel" name="whatsapp" placeholder="Numéro WhatsApp">
+            
+            <select name="sujet">
+              <option value="">Sujet de votre message</option>
+              <option value="devis">Demande de devis</option>
+              <option value="info">Demande d'informations</option>
+              <option value="partenariat">Proposition de partenariat</option>
+              <option value="autre">Autre</option>
+            </select>
+            
+            <textarea name="message" placeholder="Votre message *" required></textarea>
+            
+            <select name="budget">
+              <option value="">Budget estimé (optionnel)</option>
+              <option value="moins-50000">Moins de 50 000 XOF</option>
+              <option value="50000-100000">50 000 - 100 000 XOF</option>
+              <option value="100000-300000">100 000 - 300 000 XOF</option>
+              <option value="300000-500000">300 000 - 500 000 XOF</option>
+              <option value="500000+">500 000+ XOF</option>
+            </select>
+            
+            <div class="file-upload">
+              <i class='bx bx-cloud-upload'></i>
+              <p>Joindre des fichiers (optionnel)</p>
+              <input type="file" name="fichiers" accept="image/*,.pdf,.doc,.docx" multiple>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%;">ENVOYER LE MESSAGE</button>
           </form>
+          
+          <div class="confirmation-message">
+            <i class='bx bx-check-circle'></i>
+            <h3>MESSAGE ENVOYÉ !</h3>
+            <p>Merci pour votre message ! Notre équipe vous répondra dans les plus brefs délais.</p>
+          </div>
         </div>
 
         <div class="contact-info fade-in">
-          <h3>NOS COORDONNEES</h3>
+          <h3>NOS COORDONNÉES</h3>
           <div class="contact-info-item">
             <i class='bx bx-envelope'></i>
             <div>
@@ -57,24 +94,31 @@
             </div>
           </div>
           <div class="contact-info-item">
+            <i class='bx bxl-whatsapp'></i>
+            <div>
+              <strong>WHATSAPP</strong>
+              <p>+229 XX XX XX XX</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
             <i class='bx bx-phone'></i>
             <div>
-              <strong>TELEPHONE</strong>
-              <p>+33 1 23 45 67 89</p>
+              <strong>TÉLÉPHONE</strong>
+              <p>+229 XX XX XX XX</p>
             </div>
           </div>
           <div class="contact-info-item">
             <i class='bx bx-map'></i>
             <div>
               <strong>ADRESSE</strong>
-              <p>123 Rue de l'Innovation<br>75001 Paris, France</p>
+              <p>Cotonou, Bénin</p>
             </div>
           </div>
           <div class="contact-info-item">
             <i class='bx bx-time'></i>
             <div>
               <strong>HORAIRES</strong>
-              <p>Lun - Ven: 9h00 - 18h00</p>
+              <p>Lun - Sam: 8h00 - 20h00</p>
             </div>
           </div>
 
@@ -84,11 +128,15 @@
             <a href="#"><i class='bx bxl-linkedin'></i></a>
             <a href="#"><i class='bx bxl-twitter'></i></a>
           </div>
+          
+          <a href="https://wa.me/22900000000" class="btn btn-whatsapp" style="margin-top: 30px; width: 100%; text-align: center;">
+            <i class='bx bxl-whatsapp'></i> DISCUTER SUR WHATSAPP
+          </a>
         </div>
       </div>
 
       <div class="map-container fade-in">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1635789012345!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126846.90804842546!2d2.3522219!3d6.3702928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1024ab3c7a5c8ef7%3A0x4b5c5c5c5c5c5c5c!2sCotonou%2C%20B%C3%A9nin!5e0!3m2!1sfr!2sfr!4v1699999999999!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -116,15 +164,19 @@
         <div class="footer-section">
           <h4>CONTACT</h4>
           <p><i class='bx bx-envelope'></i> contact@jrcdigit.com</p>
-          <p><i class='bx bx-phone'></i> +33 1 23 45 67 89</p>
-          <p><i class='bx bx-map'></i> Paris, France</p>
+          <p><i class='bx bx-phone'></i> +229 XX XX XX XX</p>
+          <p><i class='bx bx-map'></i> Cotonou, Bénin</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 JRC DIGIT. Tous droits reserves.</p>
+        <p>&copy; 2024 JRC DIGIT. Tous droits réservés.</p>
       </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/22900000000" class="whatsapp-float" target="_blank" title="Contactez-nous sur WhatsApp">
+    <i class='bx bxl-whatsapp'></i>
+  </a>
 
   <script type="module" src="/assets/js/main.js"></script>
 </body>

@@ -1,0 +1,154 @@
+Le site est déjà créé. Maintenant, ajoute toutes les fonctionnalités manquantes décrites ci-dessous, SANS changer la structure déjà en place. Améliore seulement chaque page existante et ajoute les modules nécessaires.
+
+
+
+1. ILLUSTRATIONS & VISUELS
+
+- Ajoute des illustrations premium adaptées au thème néon + noir pour chaque page de service.
+
+- Utilise des images placeholders en attendant les vraies, dans /assets/img/.
+
+- Sur la page Musiques IA : ajoute des pochettes (covers) visibles dans des cards glassmorphism.
+
+
+
+2. MUSIQUES DÉJÀ GÉNÉRÉES
+
+- Ajoute une section "Écouter nos musiques déjà générées".
+
+- Chaque musique doit être affichée comme une card avec : pochette, titre, style, lecteur audio.
+
+- Place les fichiers audio démo dans /assets/musics/demo1.mp3, demo2.mp3…
+
+- Intègre un lecteur moderne (HTML5 audio custom ou Plyr.js).
+
+- Ajoute un bouton “Commander une musique similaire”.
+
+
+
+3. GLASSMORPHISM & DESIGN NEON
+
+- Améliore toutes les cards du site avec un vrai effet glassmorphism : transparence, flou, bordure lumineuse.
+
+- Ajoute des touches néon bleu/violet sur les buttons et hover states.
+
+- Ajoute un léger glow sur les titres des pages de services.
+
+- Garde un rendu propre, premium et pas trop chargé.
+
+
+
+4. GRILLES TARIFAIRES
+
+- Pour chaque service (Sites Web, Musiques, Logos), ajoute une grille tarifaire propre, en XOF.
+
+- Exemple Musiques IA :
+
+   - Pack Basic, Standard, Premium.
+
+   - Textes qui expliquent ce que chaque pack inclut.
+
+- Pour les Sites Web : à partir de 600€ (convertis en XOF).
+
+- Pour les logos : prix à partir de 10€ (en XOF).
+
+- Chaque pack doit avoir un bouton “Commander”.
+
+
+
+5. SYSTÈME DE DEVIS VISIBLE AVANT COMMANDE
+
+- Sur les pages Services :
+
+  - Ajoute un module de devis dynamique simple.
+
+  - L'utilisateur choisit : options, durée, complexité, ou type de site → un total est affiché automatiquement.
+
+- Affiche le devis final sur la page → avant que la personne remplisse le formulaire.
+
+
+
+6. FORMULAIRES AMÉLIORÉS
+
+- Sur chaque page service, ajoute un vrai formulaire complet :
+
+   - nom
+
+   - email
+
+   - WhatsApp
+
+   - description du besoin
+
+   - budget
+
+   - upload de fichiers
+
+- Le formulaire doit envoyer vers du PHP (pas Replit DB).
+
+- Prépare les pages PHP nécessaires pour qu’on puisse connecter la DB plus tard.
+
+
+
+7. CONFIRMATION POUR LES MUSIQUES
+
+- Après validation du formulaire musique, affiche un message qui explique :
+
+  “Vous recevrez votre musique personnalisée demain par mail.”
+
+- Préparer le code PHP côté backend (sans activer l’envoi d’e-mail maintenant, juste la structure).
+
+
+
+8. PAGE MUSIQUE : STRUCTURE À AJOUTER
+
+- Ajouter section "Pochettes" + "Playlist" + Cards de styles musicaux.
+
+- Ajouter un texte qui explique ce que le service inclut.
+
+- Ajouter CTA “Commander une musique personnalisée”.
+
+
+
+9. OPTIMISATION UX POUR CONVERTIR
+
+- Ajouter des blocs explicatifs sur chaque page :  
+
+   - “Pourquoi choisir JRC Digit”
+
+   - “Notre processus en 3 étapes”
+
+   - “Livraison rapide”
+
+- Ajouter un bouton WhatsApp flottant.
+
+
+
+10. AUCUN CHANGEMENT SUR LE BACK-END POUR L’INSTANT
+
+- Prépare juste les fichiers PHP (save_order.php, config.php, db.php) mais ne les active pas.
+
+- Le but est seulement d’intégrer les formulaires côté front pour l’instant.
+
+
+
+11. SITEMAP.XML
+
+- Génère un sitemap.xml propre incluant toutes les pages actuelles du site.
+
+- Place-le à la racine du projet.
+
+
+
+IMPORTANT :
+
+- Améliore uniquement ce qui manque.
+
+- Préserve complètement le design actuel.
+
+- Ajoute juste les fonctionnalités, sections, illustrations, UI, et formulaires complémentaires.
+
+- Ne supprime rien du site existant.
+
+- Continue à utiliser le thème noir + néon + glassmorphism.
+

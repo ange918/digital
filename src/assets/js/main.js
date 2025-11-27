@@ -73,20 +73,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+  const forms = document.querySelectorAll('form[data-form-type]');
+  forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
       
+      const formType = this.getAttribute('data-form-type');
       const formData = new FormData(this);
       const data = Object.fromEntries(formData);
       
-      console.log('Form submitted:', data);
+      console.log('Form submitted:', formType, data);
       
-      alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+      const confirmationMessage = document.querySelector('.confirmation-message');
+      if (confirmationMessage) {
+        confirmationMessage.classList.add('show');
+        this.style.display = 'none';
+        
+        window.scrollTo({
+          top: confirmationMessage.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      } else {
+        alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+      }
+      
       this.reset();
     });
-  }
+  });
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -111,4 +124,68 @@ document.addEventListener('DOMContentLoaded', function() {
       link.classList.add('active');
     }
   });
+
+  initQuoteCalculators();
+  initAudioPlayers();
 });
+
+function initQuoteCalculators() {
+  const calculators = document.querySelectorAll('.quote-calculator');
+  
+  calculators.forEach(calculator => {
+    const selects = calculator.querySelectorAll('select, input[type="range"]');
+    const totalDisplay = calculator.querySelector('.total');
+    
+    if (!selects.length || !totalDisplay) return;
+    
+    function calculateTotal() {
+      let total = 0;
+      const calculatorType = calculator.getAttribute('data-calculator');
+      
+      selects.forEach(select => {
+        const value = parseInt(select.value) || 0;
+        total += value;
+      });
+      
+      if (calculatorType === 'web') {
+        const basePrice = 394000;
+        total = basePrice + total;
+      } else if (calculatorType === 'music') {
+        const basePrice = 15000;
+        total = basePrice + total;
+      } else if (calculatorType === 'logo') {
+        const basePrice = 6560;
+        total = basePrice + total;
+      }
+      
+      totalDisplay.textContent = total.toLocaleString('fr-FR') + ' XOF';
+    }
+    
+    selects.forEach(select => {
+      select.addEventListener('change', calculateTotal);
+      select.addEventListener('input', calculateTotal);
+    });
+    
+    calculateTotal();
+  });
+}
+
+function initAudioPlayers() {
+  const audioElements = document.querySelectorAll('audio');
+  
+  audioElements.forEach(audio => {
+    audio.addEventListener('play', function() {
+      audioElements.forEach(other => {
+        if (other !== audio) {
+          other.pause();
+        }
+      });
+    });
+  });
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert('Copié dans le presse-papiers !');
+  });
+}
